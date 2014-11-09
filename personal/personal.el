@@ -1,3 +1,6 @@
+(prelude-require-package 'monokai-theme)
+(prelude-require-package 'evil-nerd-commenter)
+
 (key-chord-define-global "jj" nil)
 (key-chord-define-global "xx" nil)
 (key-chord-define-global "uu" nil)
