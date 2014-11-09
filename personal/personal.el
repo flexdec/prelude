@@ -1,6 +1,8 @@
 (prelude-require-package 'monokai-theme)
 (prelude-require-package 'evil-nerd-commenter)
+(prelude-require-package 'yasnippet)
 
+(yas-global-mode)
 (key-chord-define-global "jj" nil)
 (key-chord-define-global "xx" nil)
 (key-chord-define-global "uu" nil)
@@ -32,8 +34,10 @@
 
 (evilnc-default-hotkeys)
 (define-key evil-normal-state-map ",," 'evilnc-comment-or-uncomment-lines)
+(if (eq system-type 'darwin)
+    (windmove-default-keybindings 'super)
+  (windmove-default-keybindings 'meta))
 
-(windmove-default-keybindings 'meta)
 
 (setq prelude-whitespace nil)
 
